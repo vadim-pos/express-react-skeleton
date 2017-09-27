@@ -9,7 +9,9 @@ import routes from './routes';
 import './scss/styles.scss';
 
 const renderApp = () => render(
-  <BrowserRouter>{routes}</BrowserRouter>,
+  <BrowserRouter key={Math.random()}>
+    {routes}
+  </BrowserRouter>,
   document.getElementById('app')    
 );
 
